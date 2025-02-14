@@ -42,8 +42,8 @@ h5 {
 .letter {
     border-left: 200px solid #ff989e;
     border-right: 200px solid #ff989e;
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid #ff858a;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid #ff858a;
 }
 
 main {
@@ -96,13 +96,13 @@ main {
     }
 
     100% {
-        top: -170px;
+        top: -180px;
     }
 }
 
 @keyframes closePaper {
     0% {
-        top: -170px;
+        top: -180px;
     }
 
     100% {
