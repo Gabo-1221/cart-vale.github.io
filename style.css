@@ -1,0 +1,133 @@
+body {
+    background-color: #fad7df;
+}
+
+.cover {
+    position: absolute;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 100px solid #fe3334;
+    border-bottom: 100px solid transparent;
+
+    transition: transform .75s;
+    transform-origin: top;
+}
+
+h5 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.paper {
+    position: absolute;
+    padding: 1rem;
+    line-height: 1.2rem;
+    
+    z-index: -1;
+    background: white;
+    width: 368px;
+    height: 154px;
+
+    transition: all .75s;
+
+}
+
+.container-letter {
+    position: relative;
+
+/*     overflow: hidden;
+ */}
+
+.letter {
+    border-left: 200px solid #ff989e;
+    border-right: 200px solid #ff989e;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid #ff858a;
+}
+
+main {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 3rem;
+}
+
+.options {
+    display: flex;
+    gap: 5rem;
+
+    & button {
+        color: #ff3234;
+        font-weight: 600;
+        border-radius: 3px;
+        background: #fad7df;
+        padding: 0.5rem 1rem;
+        border: 1px solid #fe3334;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        background: #ff989e;
+        color: white;
+    }
+}
+
+.open-cover {
+    transform: rotateX(180deg);
+ 
+}
+
+
+.close-paper {
+    animation: closePaper .5s forwards;
+}
+.open-paper {
+    animation: openPaper .5s forwards;
+}
+
+/* style*/
+
+@keyframes openPaper {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -170px;
+    }
+}
+
+@keyframes closePaper {
+    0% {
+        top: -170px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.heart {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 44%;
+    margin: auto;
+    font-size: 3rem;
+    color: #fe3334;
+    animation: rise 1s forwards;
+}
+
+@keyframes rise {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+    100% {
+        scale: 5;
+        opacity: 0;
+    }
+}
